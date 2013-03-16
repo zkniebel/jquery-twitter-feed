@@ -65,7 +65,7 @@ Twitter Feed Options Object
    parseTweetDate functoin with one of your own.
 
 
- - Optional Link Settings (also applies to date)
+Optional Link Settings (also applies to date)
    Optional link settings are supplied in object literal form. All of the 
    objects representing optional 
    link settings have the following properties:

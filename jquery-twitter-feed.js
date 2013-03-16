@@ -248,7 +248,7 @@ DEALINGS IN THE SOFTWARE.
             url += "&count=" + settings.count;
             
             $.ajax({
-                cache: true
+                cache: false
             });
 
             $.getJSON(url, function (data) {
