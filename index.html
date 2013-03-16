@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jquery-twitter-feed : jquery twitter plugin" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Jquery-twitter-feed</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/zkniebel/jquery-twitter-feed">View on GitHub</a>
+
+          <h1 id="project_title">Jquery-twitter-feed</h1>
+          <h2 id="project_tagline">jquery twitter plugin</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/zkniebel/jquery-twitter-feed/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/zkniebel/jquery-twitter-feed/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Twitter Feed</h1>
+
+<p>by Zachary Kniebel
+Copyright (C) 2013 </p>
+
+<p>Twitter Feed is a robust and highly customizable jQuery Twitter plugin for 
+retrieving the latest tweets of a specified Twitter user. The plugin 
+provides support reply, retweet and favorite links, as well as the date of
+the tweet. </p>
+
+<h2>Features:</h2>
+
+<ul>
+<li>Ability to show/hide Reply, Retweet and Favorite (all shown by 
+ default)</li>
+<li>Ability to show/hide Date of tweet - can also be set to link to the 
+ tweet (shown and rendered as link by default)</li>
+<li>Ability to supply markup to be inserted be inserted before or after 
+ any optional links/date</li>
+<li>Ability to set the order in which optional links will/date be 
+ displayed</li>
+<li>Ability to supply a CSS class to any text/markup rendered, including 
+ the tweet body and all optional links/date</li>
+<li>Ability to specify callback function to be called either when the 
+ function completes, or when each tweet is rendered
+
+<ul>
+<li>note that any callbacks called when the fuction completes will be 
+called before the tweet is done loading (AJAX)</li>
+</ul>
+</li>
+<li>Ability to specify number of tweets to display</li>
+</ul><h2>Twitter Feed Options Object</h2>
+
+<ul>
+<li>count            : the number of tweets to display</li>
+<li>screen_name      : the Twitter handle from which to retrieve the 
+                    tweets (do not include the '@' symbol)</li>
+<li>tweetBodyClass   : a CSS class applied to the body of each retrieved 
+                    tweet</li>
+<li>date             : an object representing optional link settings (see 
+                    Dates and Optional Link Settings)</li>
+<li>reply            : an object representing optional link settings (see 
+                    Optional Link Settings)</li>
+<li>retweet          : an object representing optional link settings (see 
+                    Optional Link Settings)</li>
+<li>favorite         : an object representing optional link settings (see 
+                    Optional Link Settings)</li>
+<li>callbackOnEach   : if true, the supplied callback function will be 
+                    called after each tweet is loaded</li>
+<li>callback         : an optional callback function to be called after 
+                    each or all tweet(s) have loaded</li>
+</ul><h2>Dates</h2>
+
+<p>The plugin's included parseTweetDate function parses dates based based 
+   on when the tweet was created, similar to the way Twitter does on their 
+   own site. The date-ranges in the below table  represent the time the 
+   tweet was created, relative to the current time. These ranges are used 
+   as conditional rules for parsing the dates in their corresponding 
+   formats. </p>
+
+<p>|      Time Since Tweeting        |       Parsed Example       |</p>
+
+<hr><p>|      1 second - 59 seconds      |       43 seconds ago       |
+   |      1 minute - 59 minutes      |       11 minutes ago       |
+   |      1 hour   - 23 hours        |       7 hours ago          |
+   |      1 day    - XXXXXXXXXX      |       Feb 23 '12           |</p>
+
+<p>If these formats are not to your liking, you need only replace the 
+   parseTweetDate functoin with one of your own.</p>
+
+<h2>Optional Link Settings (also applies to date)</h2>
+
+<p>Optional link settings are supplied in object literal form. All of the 
+   objects representing optional 
+   link settings have the following properties:</p>
+
+<ul>
+<li>show     : if set to true, the link/date is shown (shown by default)</li>
+<li>class    : CSS class to be applied to the link/date</li>
+<li>order    : number (zero-based index) indicating when link should be 
+            rendered in ordering</li>
+<li>prepend  : HTML markup to be inserted before the link/date</li>
+<li>append   : HTML markup to be inserted after the link/date</li>
+<li>link     : indicates whether or not the date should link to the tweet 
+            (note: effective on date)</li>
+</ul><hr><p>This software is protected under the MIT license, below, and under the 
+Open Source GPL v3.0 license (<a href="http://opensource.org/licenses/GPL-3.0">http://opensource.org/licenses/GPL-3.0</a>).</p>
+
+<p>Copyright (C) 2013 Zachary Kniebel</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a 
+copy of this software and associated documentation files (the "Software"), 
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+and/or sell copies of the Software, and to permit persons to whom the 
+Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+DEALINGS IN THE SOFTWARE.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Jquery-twitter-feed maintained by <a href="https://github.com/zkniebel">zkniebel</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
