@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="jquery-twitter-feed 1.0 : jquery twitter plugin" />
+    <meta name="description" content="jquery-twitter-feed 1.0.1 : jQuery Twitter Plugin with Twitter API 1.1 Support" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>jquery-twitter-feed 1.0</title>
+    <title>jquery-twitter-feed 1.0.1</title>
   </head>
 
   <body>
@@ -18,8 +18,8 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/zkniebel/jquery-twitter-feed">View on GitHub</a>
 
-          <h1 id="project_title">jquery-twitter-feed 1.0</h1>
-          <h2 id="project_tagline">jquery twitter plugin</h2>
+          <h1 id="project_title">jquery-twitter-feed 1.0.1</h1>
+          <h2 id="project_tagline">jQuery Twitter Plugin with Twitter API 1.1 Support</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/zkniebel/jquery-twitter-feed/zipball/master">Download this project as a .zip file</a>
@@ -33,13 +33,26 @@
       <section id="main_content" class="inner">
         <h1>Twitter Feed</h1>
 
-<p>by Zachary Kniebel
-Copyright (C) 2013 </p>
+<p>by Zachary Kniebel</p>
 
 <p>Twitter Feed is a robust and highly customizable jQuery Twitter plugin for 
-retrieving the latest tweets of a specified Twitter user. The plugin 
-provides support reply, retweet and favorite links, as well as the date of
-the tweet. </p>
+retrieving the latest tweets of a specified Twitter user's timeline. The 
+plugin provides support reply, retweet and favorite links, as well as the 
+date of the tweet. </p>
+
+<h2>TWITTER API 1.1 UPDATE NOTES:</h2>
+
+<p>As a result of the new security and authorization requirements that<br>
+   Twitter included in their API 1.1 update, the support for performing 
+   the actual AJAX request to retrieve a user's tweets has been removed.
+   Twitter strongly discourages client-side requests with their new API,
+   as client-side requests would require the exposure of the site's oAuth
+   secrets. As such, I have included support for supplying a the raw, 
+   unparsed JSON response from Twitter to the plugin, and will be updating
+   with instructions and samples for setting up the necessary account and 
+   application on Twitter, and implementing the plugin with .NET and with 
+   PHP. For updates and instructions, see the SETUP_INSTRUCTIONS file in
+   the Server-Side Examples directory.</p>
 
 <h2>Features:</h2>
 
@@ -67,6 +80,9 @@ called before the tweet is done loading (AJAX)</li>
 
 <ul>
 <li>count            : the number of tweets to display</li>
+<li>rawData          : the unparsed JSON result of the tweet request made
+                    to Twitter (string)<br>
+</li>
 <li>screen_name      : the Twitter handle from which to retrieve the 
                     tweets (do not include the '@' symbol)</li>
 <li>tweetBodyClass   : a CSS class applied to the body of each retrieved 
@@ -92,12 +108,13 @@ called before the tweet is done loading (AJAX)</li>
    as conditional rules for parsing the dates in their corresponding 
    formats. </p>
 
-<p>|      Time Since Tweeting        |       Parsed Example       |</p>
+<pre><code>  [Time Since Tweeting] :    [Parsed Example]
 
-<hr><p>|      1 second - 59 seconds      |       43 seconds ago       |
-   |      1 minute - 59 minutes      |       11 minutes ago       |
-   |      1 hour   - 23 hours        |       7 hours ago          |
-   |      1 day    - XXXXXXXXXX      |       Feb 23 '12           |</p>
+  1 second - 59 seconds :    43 seconds ago  
+  1 minute - 59 minutes :    11 minutes ago  
+  1 hour   - 23 hours   :    7 hours ago  
+  1 day    - XXXXXXXXXX :    Feb 23 '12 
+</code></pre>
 
 <p>If these formats are not to your liking, you need only replace the 
    parseTweetDate functoin with one of your own.</p>
@@ -110,7 +127,7 @@ called before the tweet is done loading (AJAX)</li>
 
 <ul>
 <li>show     : if set to true, the link/date is shown (shown by default)</li>
-<li>class    : CSS class to be applied to the link/date</li>
+<li>cssClass : CSS class to be applied to the link/date</li>
 <li>order    : number (zero-based index) indicating when link should be 
             rendered in ordering</li>
 <li>prepend  : HTML markup to be inserted before the link/date</li>
@@ -145,7 +162,7 @@ DEALINGS IN THE SOFTWARE.</p>
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">jquery-twitter-feed 1.0 maintained by <a href="https://github.com/zkniebel">zkniebel</a></p>
+        <p class="copyright">jquery-twitter-feed 1.0.1 maintained by <a href="https://github.com/zkniebel">zkniebel</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
