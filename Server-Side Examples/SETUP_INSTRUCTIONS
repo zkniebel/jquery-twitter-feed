@@ -5,7 +5,25 @@ INTRODUCTION:
 
 In this directory, you will find a file named CSharpRequestExample.txt
 that contains a tested, working example method for making the request to
-Twitter. If you are already familiar with Twitter's oAuth requirements
+Twitter. There is also a file named PHPRequestExample that contains a 
+set of methods for making the request in PHP. Please know that I have not
+yet tested the code in PHPRequestExample, though it has been very highly
+rated on StackOverflow. 
+
+
+SAMPLE CODE CREDIT:
+
+I did not write either of the example code files myself. I did modify and 
+test the code in the CSharpRequestExample file, however, and included my 
+modified version. The original source of that code came from
+https://dev.twitter.com/discussions/15206 (LeathalChicken), and the 
+original source of the PHP code came from 
+http://stackoverflow.com/a/12939923/1506793 (Rivers). 
+
+
+BEFORE CONTINUING:
+
+If you are already familiar with Twitter's oAuth requirements
 and setup, then the remainder of this document will only repeat what you
 already know. 
 
@@ -52,7 +70,7 @@ necessary calls.
 
 EXAMPLE CODE LOG:
 
-Coming Soon - PHPRequequestExample.txt to serve as a PHP example for 
+March 18, 2013 - PHPRequequestExample.txt to serve as a PHP example for 
     performing the request to Twitter.
 
 March 18, 2013 - Added CSharpRequestExample.txt to serve as a C# .NET 
