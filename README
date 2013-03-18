@@ -70,10 +70,10 @@ Twitter Feed Options Object
    
       [Time Since Tweeting] :    [Parsed Example]
       
-      { 1 second - 59 seconds :    43 seconds ago }, 
-      { 1 minute - 59 minutes :    11 minutes ago }, 
-      { 1 hour   - 23 hours   :    7 hours ago }, 
-      { 1 day    - XXXXXXXXXX :    Feb 23 '12 }
+       1 second - 59 seconds :    43 seconds ago  
+       1 minute - 59 minutes :    11 minutes ago  
+       1 hour   - 23 hours   :    7 hours ago  
+       1 day    - XXXXXXXXXX :    Feb 23 '12 
 
    If these formats are not to your liking, you need only replace the 
    parseTweetDate functoin with one of your own.
