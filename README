@@ -15,9 +15,10 @@ TWITTER API 1.1 UPDATE NOTES:
    as client-side requests would require the exposure of the site's oAuth
    secrets. As such, I have included support for supplying a the raw, 
    unparsed JSON response from Twitter to the plugin, and will be updating
-   the README with instructions and samples for setting up the necessary 
-   account and application on Twitter, and implementing the plugin with 
-   .NET and with PHP.
+   with instructions and samples for setting up the necessary account and 
+   application on Twitter, and implementing the plugin with .NET and with 
+   PHP. For updates and instructions, see the SETUP_INSTRUCTIONS file in
+   the Server-Side Examples directory.
 
 Features:
    - Ability to show/hide Reply, Retweet and Favorite (all shown by 

@@ -1,0 +1,61 @@
+Setup Instructions - Twitter API 1.1
+
+
+INTRODUCTION:
+
+In this directory, you will find a file named CSharpRequestExample.txt
+that contains a tested, working example method for making the request to
+Twitter. If you are already familiar with Twitter's oAuth requirements
+and setup, then the remainder of this document will only repeat what you
+already know. 
+
+
+ABOUT THE NEW API:
+
+The Twitter API 1.1 release includes many changes to their existing API 
+and renders much of it, along with the vast majority of plugins that were
+designed for the original API useless. This is because of several new 
+security and authentication requirements that Twitter now requires in all
+calls to retrieve or update data. This added security feature requires  
+that requests include special security keys in order to be authenticated,
+and several of these keys should be kept hidded from site visitors. If you
+want to read more about their changes or see more details about their new
+security measures, visit http://dev.twitter.com. 
+
+
+SETUP INSTRUCTIONS:
+
+1. If you have not created one already, the first thing that you will need 
+   is a Twitter account. Note that the account that you create need not be  
+   the one that you are retrieving status updates (tweets) from. 
+
+2. Go to http://dev.twitter.com and login with your developer account, or
+   your new, regular account. If you are doing the latter, Twitter will 
+   automatically create a developer account for you from your regular one.
+   
+3. Hover over your username (upper right) and click "My Applications". 
+
+4. Click "Create a new application" and enter the necessary information. 
+   For the "Callback URL", enter the URL of the website on which you will 
+   be using this plugin. NOTE: the "Callback URL" is optional and is only
+   necessary if you plan to use callbacks.
+   
+5. Once your Application has been created, click on "Create my access
+   token", at the bottom of the "Details" tab on the application's page. 
+   
+At this point, you will have all of the necessary keys, secrets and tokens 
+necessary for using this plugin. If you are unsure of what to do next, 
+take a look at the example code, provided with the plugin. The code notes
+where you need to put each of the necessary tokens and makes all of the 
+necessary calls.
+
+
+EXAMPLE CODE LOG:
+
+Coming Soon - PHPRequequestExample.txt to serve as a PHP example for 
+    performing the request to Twitter.
+
+March 18, 2013 - Added CSharpRequestExample.txt to serve as a C# .NET 
+    example for performing the request to Twitter.
+
+March 18, 2013 - Added SETUP_INSTRUCTIONS 
