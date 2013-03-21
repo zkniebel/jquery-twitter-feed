@@ -54,3 +54,49 @@ $json = curl_exec($feed);
 curl_close($feed);
 
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Twitter Live PHP Testing</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://raw.github.com/zkniebel/jquery-twitter-feed/master/jquery-twitter-feed.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".homeTwitterFeed").each(function() {
+			var $this = $(this);
+			var $hfTwitter = $this.siblings(".hfTwitter");
+			var screenname = '<?php echo $twitter_handle; ?>';
+			var rawJSON = '<?php echo $json; ?>';
+			if (screenname && rawJSON) {
+				$this.twitterFeed({
+					count: 8,
+					rawData: rawJSON,
+					screen_name: screenname,
+					tweetBodyClass: "tweetBody homeFeedBody",
+					date: { prepend: "<div class='homeFeedLinks'>", append: " - ", cssClass: "feedItemDate" },
+					reply: { append: " - ", },
+					favorite: { prepend: " - ", append: "</div>"}
+				});
+			} else {
+				$this.css("display","none");
+			}	
+		});
+	});
+</script>
+</head>
+<body>
+<div class="homeTwitterFeed">
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

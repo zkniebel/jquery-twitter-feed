@@ -6,18 +6,23 @@ INTRODUCTION:
 In this directory, you will find a file named CSharpRequestExample.txt
 that contains a tested, working example method for making the request to
 Twitter. There is also a file named PHPRequestExample that contains a 
-set of methods for making the request in PHP. Please know that I have not
-yet tested the code in PHPRequestExample, though it has been very highly
-rated on StackOverflow. 
+set of methods for making the request in PHP. 
+
+If you navigate to the "Plug and Play" sub-directory, you will find a 
+file, "Ready_PHP.php" that is ready to run and render your tweets. The
+only thing that you will have to do is upload it to your server, add in
+your oAuth and consumer tokens and keys, and type in the twitter handle 
+that you want to use. Note that in order to get those keys and tokens you 
+will still have to set up an application on Twitter (see below).
 
 
 SAMPLE CODE CREDIT:
 
 I did not write either of the example code files myself. I did modify and 
-test the code in the CSharpRequestExample file, however, and included my 
-modified version. The original source of that code came from
+test the code in the examples, however, and included my modified version. 
+The original source of the C# example is 
 https://dev.twitter.com/discussions/15206 (LeathalChicken), and the 
-original source of the PHP code came from 
+original source of the PHP example is 
 http://stackoverflow.com/a/12939923/1506793 (Rivers). 
 
 
@@ -70,7 +75,11 @@ necessary calls.
 
 EXAMPLE CODE LOG:
 
-March 18, 2013 - PHPRequequestExample.txt to serve as a PHP example for 
+March 21, 2013 - Added Ready_PHP.php to serve as a "ready to go" example
+
+March 21, 2013 - Updated PHPRequestExample.txt after testing 
+
+March 18, 2013 - PHPRequestExample.txt to serve as a PHP example for 
     performing the request to Twitter.
 
 March 18, 2013 - Added CSharpRequestExample.txt to serve as a C# .NET 
