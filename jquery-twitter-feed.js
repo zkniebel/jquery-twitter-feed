@@ -37,6 +37,8 @@ DEALINGS IN THE SOFTWARE.
             count: 5,
             rawData: "", //unparsed JSON result of tweet request
             screen_name: "",
+            prepend: "",
+            append: "",
             tweetBodyClass: "",
             date: {
                 show: true,
@@ -174,7 +176,14 @@ DEALINGS IN THE SOFTWARE.
             for (var j = 0; j < numTweets; j++) {
                 var rawTweet = jsonTweets[j];
                 if (rawTweet.text !== undefined) {
-                    var $tweet = $("<span class='" + settings.tweetBodyClass + "'>" + sanitizeTweet(rawTweet.text) + "</span>" + optionalMarkup(rawTweet));
+                    var $tweet = $(
+                            settings.prepend + 
+                            "<span class='" + settings.tweetBodyClass +  "'>" + 
+                            sanitizeTweet(rawTweet.text) + 
+                            "</span>" + 
+                            optionalMarkup(rawTweet) + 
+                            settings.append
+                        );
                     $tweet.appendTo(ele);
 
                     if (settings.callbackOnEach && !! settings.callback) {

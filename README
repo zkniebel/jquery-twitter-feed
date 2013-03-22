@@ -46,6 +46,8 @@ Twitter Feed Options Object
                         to Twitter (string)  
    - screen_name      : the Twitter handle from which to retrieve the 
                         tweets (do not include the '@' symbol)
+   - prepend          : markup to insert before the tweet 
+   - append           : markup to insert after the tweet
    - tweetBodyClass   : a CSS class applied to the body of each retrieved 
                         tweet
    - date             : an object representing optional link settings (see 
