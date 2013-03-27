@@ -98,14 +98,17 @@ Optional Link Settings (also applies to date)
 
 
 				
-VERSION NOTES:
+VERSION AND RELEASE NOTES:
+
+-- merged v1.1 into master --
 
 v1.1.0 
     - Major modern browsers, IE7+ support
     - Improvements to method of ordering optional links
     - Updated support for parsing JSON in IE7 and earlier
 	
--- branch for v1.1.0 --
+-- created branch for v1.1 --
+-- created branch for v1.0 (version backup) --
 
 v1.0.2 (not named in commit comment)
     - (Initial Commit: 2deb4ec6f1aacfc92b178f7e1f11b8b9dae39298)
