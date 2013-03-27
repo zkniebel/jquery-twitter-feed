@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
         var settings = $.extend(
         true, {
             count: 5,
-            rawData: "", //unparsed JSON result of tweet request
+            rawData: "",  
             screen_name: "",
             prepend: "",
             append: "",
@@ -116,29 +116,29 @@ DEALINGS IN THE SOFTWARE.
                     date += "<span class='" + settings.date.cssClass + "'>" + parsedDate + "</span>";
                 }
                 date += settings.date.append;
-
-                orderedElements[settings.date.order] = date;
+                
+                orderedElements.splice(settings.date.order, 0, date);
             }
             if (settings.reply.show) {
                 reply += settings.reply.prepend;
                 reply += "<a href='https://twitter.com/intent/tweet?in_reply_to=" + rawTweet.id_str + "' class='" + settings.reply.cssClass + "'>reply</a>";
                 reply += settings.reply.append;
 
-                orderedElements[settings.reply.order] = reply;
+                orderedElements.splice(settings.reply.order, 0, reply);
             }
             if (settings.retweet.show) {
                 retweet += settings.retweet.prepend;
                 retweet += "<a href='https://twitter.com/intent/retweet?tweet_id=" + rawTweet.id_str + "' class='" + settings.retweet.cssClass + "'>retweet</a>";
                 retweet += settings.retweet.append;
 
-                orderedElements[settings.retweet.order] = retweet;
+                orderedElements.splice(settings.retweet.order, 0, retweet);
             }
             if (settings.favorite.show) {
                 favorite += settings.favorite.prepend;
                 favorite += "<a href='https://twitter.com/intent/favorite?tweet_id=" + rawTweet.id_str + "' class='" + settings.favorite.cssClass + "'>favorite</a>";
                 favorite += settings.favorite.append;
 
-                orderedElements[settings.favorite.order] = favorite;
+                orderedElements.splice(settings.favorite.order, 0, favorite);
             }
 
             var markup = "";
@@ -169,7 +169,7 @@ DEALINGS IN THE SOFTWARE.
             var ele = $this[i];
 
             /** UPDATED: Compatible with Twitter API 1.1 **/
-            var jsonTweets = JSON.parse(settings.rawData);
+            var jsonTweets = $.parseJSON(settings.rawData);
             jsonTweets = jsonTweets.slice(0, settings.count);
 
             var numTweets = jsonTweets.length;
