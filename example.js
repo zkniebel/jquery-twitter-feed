@@ -1,7 +1,7 @@
 $(document).ready(function () {
         $("#feedTarget").twitterFeed({
 		        count: 4,
-                rawData: yourRawJSONData,
+                jsonData: yourParsedJSONData,
                 screen_name: twitterHandleToQuery,
                 prepend: "<div class='tweetWrapper'>", 
                 append: "</div>",
