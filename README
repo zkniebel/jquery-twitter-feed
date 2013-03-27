@@ -42,8 +42,8 @@ Features:
 
 Twitter Feed Options Object
    - count            : the number of tweets to display
-   - jsonData         : the JSON result of the tweet request made to 
-                        Twitter (array)  
+   - rawData          : the JSON result of the tweet request made to 
+                        Twitter (string) 
    - screen_name      : the Twitter handle from which to retrieve the 
                         tweets (do not include the '@' symbol)
    - prepend          : markup to insert before the tweet 
@@ -103,10 +103,9 @@ VERSION NOTES:
 v1.1.0 
     - Major modern browsers, IE7+ support
     - Improvements to method of ordering optional links
-	- Updated to only accept parsed JSON (previously accepted parsed or 
-      unparsed - support of this feature not possible in IE8 and earlier)
+    - Updated support for parsing JSON in IE7 and earlier
 	
--- branch for v1.1.0 to preserve v1.0.2 for existing implementors --
+-- branch for v1.1.0 --
 
 v1.0.2 (not named in commit comment)
     - (Initial Commit: 2deb4ec6f1aacfc92b178f7e1f11b8b9dae39298)

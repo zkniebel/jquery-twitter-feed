@@ -35,8 +35,7 @@ DEALINGS IN THE SOFTWARE.
         var settings = $.extend(
         true, {
             count: 5,
-            //rawData: "", /** DEPRECATED: March 27th, 2013 - plugin now requires parsed JSON **/
-            jsonData: [], 
+            rawData: "",  
             screen_name: "",
             prepend: "",
             append: "",
@@ -170,7 +169,7 @@ DEALINGS IN THE SOFTWARE.
             var ele = $this[i];
 
             /** UPDATED: Compatible with Twitter API 1.1 **/
-            var jsonTweets = settings.jsonData;
+            var jsonTweets = $.parseJSON(settings.rawData);
             jsonTweets = jsonTweets.slice(0, settings.count);
 
             var numTweets = jsonTweets.length;
