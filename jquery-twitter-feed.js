@@ -36,7 +36,7 @@ DEALINGS IN THE SOFTWARE.
         true, {
             count: 5,
             rawData: "",  
-            screen_name: "",
+            //screen_name: "", /** DEPRECATED: April 1st, 2013 - Parameter is redundant, as value can be taken from JSON data, and limits plugin support**/
             prepend: "",
             append: "",
             tweetBodyClass: "",
@@ -73,10 +73,6 @@ DEALINGS IN THE SOFTWARE.
         },
         options);
 
-        if (!settings.screen_name) {
-            return;
-        };
-
         var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         var parseTweetDate = function (date) {
             var date = new Date(date);
@@ -110,7 +106,7 @@ DEALINGS IN THE SOFTWARE.
                 date += settings.date.prepend;
                 var parsedDate = parseTweetDate(rawTweet.created_at);
                 if (settings.date.link) {
-                    date += "<a href='https://twitter.com/" + settings.screen_name + "/status/" + rawTweet.id_str + "'";
+                    date += "<a href='https://twitter.com/" + rawTweet.user.screen_name + "/status/" + rawTweet.id_str + "'";
                     date += " class='" + settings.date.cssClass + "'>" + parsedDate + "</a>";
                 } else {
                     date += "<span class='" + settings.date.cssClass + "'>" + parsedDate + "</span>";

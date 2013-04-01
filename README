@@ -44,8 +44,6 @@ Twitter Feed Options Object
    - count            : the number of tweets to display
    - rawData          : the JSON result of the tweet request made to 
                         Twitter (string) 
-   - screen_name      : the Twitter handle from which to retrieve the 
-                        tweets (do not include the '@' symbol)
    - prepend          : markup to insert before the tweet 
    - append           : markup to insert after the tweet
    - tweetBodyClass   : a CSS class applied to the body of each retrieved 

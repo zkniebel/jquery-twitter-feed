@@ -66,7 +66,6 @@ curl_close($feed);
 		$(".homeTwitterFeed").each(function() {
 			var $this = $(this);
 			var $hfTwitter = $this.siblings(".hfTwitter");
-			var screenname = '<?php echo $twitter_handle; ?>';
 			var rawJSON = '<?php echo $json; ?>';
 			if (screenname && rawJSON) {
 				$this.twitterFeed({
