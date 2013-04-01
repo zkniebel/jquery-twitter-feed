@@ -1,4 +1,4 @@
-Twitter Feed v1.1.0
+# Twitter Feed v1.1.0
 by Zachary Kniebel
 
 
@@ -8,7 +8,7 @@ plugin provides support reply, retweet and favorite links, as well as the
 date of the tweet. 
 
 
-TWITTER API 1.1 UPDATE NOTES:
+## TWITTER API 1.1 UPDATE NOTES:
    As a result of the new security and authorization requirements that   
    Twitter included in their API 1.1 update, the support for performing 
    the actual AJAX request to retrieve a user's tweets has been removed.
@@ -22,7 +22,7 @@ TWITTER API 1.1 UPDATE NOTES:
    the Server-Side Examples directory.
    
 
-Features:
+## Features:
    - Ability to show/hide Reply, Retweet and Favorite (all shown by 
      default)
    - Ability to show/hide Date of tweet - can also be set to link to the 
@@ -40,7 +40,7 @@ Features:
    - Ability to specify number of tweets to display
    
 
-Twitter Feed Options Object
+## Twitter Feed Options Object
    - count            : the number of tweets to display
    - rawData          : the JSON result of the tweet request made to 
                         Twitter (string) 
@@ -62,7 +62,7 @@ Twitter Feed Options Object
                         each or all tweet(s) have loaded
 
 
- Dates
+## Dates
    The plugin's included parseTweetDate function parses dates based based 
    on when the tweet was created, similar to the way Twitter does on their 
    own site. The date-ranges in the below table  represent the time the 
@@ -81,7 +81,7 @@ Twitter Feed Options Object
    parseTweetDate functoin with one of your own.
 
 
-Optional Link Settings (also applies to date)
+## Optional Link Settings (also applies to date)
    Optional link settings are supplied in object literal form. All of the 
    objects representing optional 
    link settings have the following properties:
@@ -94,9 +94,23 @@ Optional Link Settings (also applies to date)
    - link     : indicates whether or not the date should link to the tweet 
                 (note: effective on date)
 
+				
+## TweetNET (initial release, only)
+   TweetNET is a work-in-progress library that I am working on, to better
+   assist developers in connecting with Twitter via C#. TweetNET IS NOT 
+   REQUIRED for Twitter Feed, but may be useful for those using C# or
+   .NET, in general. I have included only the initial release in this 
+   project, and will only be updating with bug fixes. The initial release
+   includes support for the statuses/user_timeline and statuses/show/:id
+   requests. For future releases, please view TweetNET's official 
+   repository, at https://github.com/zkniebel/TweetNet.
+
+
 
 				
-VERSION AND RELEASE NOTES:
+## VERSION AND RELEASE NOTES:
+
+-- added TweetNET v1.0 --
 
 -- merged v1.1 into master --
 
