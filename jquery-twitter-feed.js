@@ -166,7 +166,13 @@ DEALINGS IN THE SOFTWARE.
 
             /** UPDATED: Compatible with Twitter API 1.1 **/
             var jsonTweets = $.parseJSON(settings.rawData);
-            jsonTweets = jsonTweets.slice(0, settings.count);
+            if ($.isArray(jsonTweets)) {
+              jsonTweets = jsonTweets.slice(0, settings.count);
+            } else {
+              var temp = [];
+              temp[0] = jsonTweets;
+              jsonTweets = temp;
+            }
 
             var numTweets = jsonTweets.length;
             for (var j = 0; j < numTweets; j++) {
