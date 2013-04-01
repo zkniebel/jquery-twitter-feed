@@ -31,7 +31,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>Twitter Feed</h1>
+        <h1>Twitter Feed v1.1.0</h1>
 
 <p>by Zachary Kniebel</p>
 
@@ -80,11 +80,8 @@ called before the tweet is done loading (AJAX)</li>
 
 <ul>
 <li>count            : the number of tweets to display</li>
-<li>rawData          : the unparsed JSON result of the tweet request made
-                    to Twitter (string)<br>
-</li>
-<li>screen_name      : the Twitter handle from which to retrieve the 
-                    tweets (do not include the '@' symbol)</li>
+<li>rawData          : the JSON result of the tweet request made to 
+                    Twitter (string) </li>
 <li>prepend          : markup to insert before the tweet </li>
 <li>append           : markup to insert after the tweet</li>
 <li>tweetBodyClass   : a CSS class applied to the body of each retrieved 
@@ -136,7 +133,47 @@ called before the tweet is done loading (AJAX)</li>
 <li>append   : HTML markup to be inserted after the link/date</li>
 <li>link     : indicates whether or not the date should link to the tweet 
             (note: effective on date)</li>
-</ul><hr><p>This software is protected under the MIT license, below, and under the 
+</ul><h2>TweetNET (initial release, only)</h2>
+
+<p>TweetNET is a work-in-progress library that I am working on, to better
+   assist developers in connecting with Twitter via C#. TweetNET IS NOT 
+   REQUIRED for Twitter Feed, but may be useful for those using C# or
+   .NET, in general. I have included only the initial release in this 
+   project, and will only be updating with bug fixes. The initial release
+   includes support for the statuses/user_timeline and statuses/show/:id
+   requests. For future releases, please view TweetNET's official 
+   repository, at <a href="https://github.com/zkniebel/TweetNet">https://github.com/zkniebel/TweetNet</a>.</p>
+
+<h2>VERSION AND RELEASE NOTES:</h2>
+
+<p>-- added TweetNET v1.0 --</p>
+
+<p>-- merged v1.1 into master --</p>
+
+<p>v1.1.0 
+    - Major modern browsers, IE7+ support
+    - Improvements to method of ordering optional links
+    - Updated support for parsing JSON in IE7 and earlier</p>
+
+<p>-- created branch for v1.1 --
+-- created branch for v1.0 (version backup) --</p>
+
+<p>v1.0.2 (not named in commit comment)
+    - (Initial Commit: 2deb4ec6f1aacfc92b178f7e1f11b8b9dae39298)
+    - Major modern browsers, IE9+ support
+    - Improvements, optimizations and tweaks post Twitter API 1.1 update
+    - Example plugin call</p>
+
+<p>v1.0.1 (beta):
+    - Major modern browsers, IE9+ support
+    - Twitter API 1.1 support
+    - Server-side examples, improved documentation</p>
+
+<p>v1.0 (alpha):
+    - Major modern browsers, IE7+ support
+    - Twitter API 1.0 support</p>
+
+<hr><p>This software is protected under the MIT license, below, and under the 
 Open Source GPL v3.0 license (<a href="http://opensource.org/licenses/GPL-3.0">http://opensource.org/licenses/GPL-3.0</a>).</p>
 
 <p>Copyright (C) 2013 Zachary Kniebel</p>
