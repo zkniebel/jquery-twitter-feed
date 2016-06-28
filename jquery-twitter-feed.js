@@ -91,7 +91,7 @@ DEALINGS IN THE SOFTWARE.
             } else if (dateDiff < hours) {
                 return dateDiff + " hours ago";
             } else {
-                return months[date.getUTCMonth()] + " " + date.getUTCDay() + " '" + (date.getUTCFullYear() + "").substring(2);
+                return months[date.getUTCMonth()] + " " + date.getUTCDate() + " '" + (date.getUTCFullYear() + "").substring(2);
             }
         };
 
